@@ -14,9 +14,8 @@
         margin-bottom: 1.5rem;
         display: inline-block;
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-        -webkit-background-clip: text;
-        color: transparent;
-        
+        color: transparent;        
+        -webkit-background-clip: text;        
     }
 
     &:hover{
