@@ -1,6 +1,12 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .header {
+    @media(min-resolution:192dpi) and (max-width: 900px){
+        background-image: 
+            linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+            url('../img/background1.jpg');
+    }
     background-image:
         linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
         url('../img/background1.jpg');
@@ -10,6 +16,10 @@
     height: 95vh;
     -webkit-clip-path: ellipse(60% 60% at 50% 33%);
     clip-path: ellipse(60% 60% at 50% 33%);
+
+    @include respond(phone){
+        clip-path: ellipse(60% 50% at 50% 20%);
+    }
 
     &__text-box {
         position: absolute;
